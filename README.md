@@ -7,6 +7,10 @@ No data is sent anywhere, signature verification is done entirely off-line
 in the browser.  
 **In any case, don't put sensitive data into this page without reading the code first!**
 
+# Live Demo
+
+Live demo is accessible as https://trianglee.github.io/greenpass-js/.
+
 # Origins
 
 Based on the details and verification code provided by Ministry of Health in
