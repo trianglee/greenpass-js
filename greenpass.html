@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+                
+        <script src="greenpass.js"></script>
+
+        <title>Green Pass JS</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .validSignature {
+                color: green;
+            }
+            .invalidSignature {
+                color: red;
+            }
+        </style>
+    </head>
+    <body onload="onLoad()">
+
+        <h1>Green Pass JS</h1>
+        <p>
+            Self-contained HTML page to verify Green Pass QR code signature, using
+            the Israel Ministry of Health RSA public key.
+        </p>
+        <p>
+            No data is sent anywhere, signature verification is done entirely off-line 
+            in the browser.<br/>
+            <span style="color:red; font-weight:bold">In any case, don't put sensitive data into
+            this page without reading the code first!</span>
+        </p>
+        <hr>
+        <p>
+            QR Code Text:<br/>
+            <textarea id="qrCodeText" rows="7" cols="100" oninput="onVerifySignature()"
+            placeholder="Scan the QR code to obtain a string, and paste it here"></textarea><br/>
+        </p>
+        <p>
+            PEM Public Key:<br/>
+            <textarea id="pemPublicKey" rows="10" cols="80" oninput="onVerifySignature()"></textarea><br/>
+        </p>
+        <p>
+            Signature Verification:<br/>
+            <input type="text" id="verifyResult" style="width: 50ch" readonly="readonly"><br/>
+        </p>
+        <p>
+            ID Number:<br/>
+            <input type="text" id="idNumber" style="width: 10ch" readonly="readonly"><br/>
+            Expirtaion:<br/>
+            <input type="text" id="expiration" style="width: 12ch" readonly="readonly"><br/>
+        </p>        
+        <hr>
+        <p>
+            Source code available in <a href="https://github.com/trianglee/greenpass-js">
+            https://github.com/trianglee/greenpass-js</a>.
+        </p>
+        <p>
+            Based on the details and verification code provided by Ministry of Health
+            in <a href="https://github.com/MohGovIL/Ramzor">https://github.com/MohGovIL/Ramzor</a>,
+            and on the reverse-engeering work done by Yuval Adam in
+            <a href="https://github.com/yuvadm/greenpass">https://github.com/yuvadm/greenpass</a>.
+        </p>
+    </body>
+</html>
