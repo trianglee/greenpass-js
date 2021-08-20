@@ -1,5 +1,8 @@
 # Overview
 
+**This project is now archived. See https://github.com/trianglee/greenpass-verify for
+a maintained version.**
+
 Self-contained HTML to verify Green Pass QR code signature, using
 the Israel Ministry of Health RSA public key.
 
